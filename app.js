@@ -2,6 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import logo from "./logo.png";
 
+import restaurants from "./utils/restaurants.json";
+
 /*
 
 
@@ -40,18 +42,28 @@ const Header = () => {
   );
 };
 
-const RestaurantCard = () => {
+const RestaurantCard = (props) => {
+  const { resData } = props;
+
+  const { name, image, cft, rating } = resData?.info;
+  const { deliveryTime } = resData?.order;
+
+  const cuisine = resData.info.cuisine;
+  let cuisines = [];
+
+  for (let i of cuisine) {
+    cuisines.push(i.name);
+  }
+
   return (
     <div className="res-card">
-      <img
-        className="res-logo"
-        alt="res-logo"
-        src="https://b.zmtcdn.com/data/pictures/chains/9/6507609/9b51e3f85654b9588558b2a11ece5d27_o2_featured_v2.jpg?output-format=webp"
-      />
-      <h3>Cheesiano pizza</h3>
-      <h4>Pizza, Pasta, Momos </h4>
-      <h4>4.4 stars</h4>
-      <h4>20 minutes</h4>
+      <img className="res-logo" alt="res-logo" src={image.url} />
+      <h3>{name}</h3>
+
+      <h5>{` Cuisines : ${cuisines.join(",")}`}</h5>
+      <h5>{` Delivery Time : ${deliveryTime}`}</h5>
+      <h5>{` price : ${cft.text}`}</h5>
+      <h5>{` Rating : ${rating.rating_text}`}</h5>
     </div>
   );
 };
@@ -61,14 +73,9 @@ const Body = () => {
     <div className="body">
       <div className="search">search</div>
       <div className="res-container">
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
+        {restaurants.map((restaurant) => (
+          <RestaurantCard key={restaurant.info.resId} resData={restaurant} />
+        ))}
       </div>
     </div>
   );

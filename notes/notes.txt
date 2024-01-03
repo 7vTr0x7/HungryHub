@@ -1,0 +1,9 @@
+
+   props-
+   - what are props
+   -> props are passed to components
+   -> passing a prop a to a component is just passing arguments to a function
+   -> prop is an object
+   
+   config driven ui -
+   - all the ui is driven by config/api data
