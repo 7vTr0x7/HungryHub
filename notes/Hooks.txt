@@ -10,3 +10,8 @@
 
   state variables 
   -> maintains the state of a component
+
+  -> Whenever state variables update/changes   react re-renders the component
+
+
+  -> react.js is monitoring the state variables as soon as the state updates react.js will trigger its diff algo to find out the difference between old virtual dom and new virtual dom and then will update the UI and render it 

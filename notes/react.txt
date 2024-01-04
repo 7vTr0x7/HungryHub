@@ -1,0 +1,58 @@
+
+
+# react
+
+  # Why react.js is fast?
+  -> Because react is doing efficient dom-manipulation
+     how?
+     -> because it has a virtual dom
+     -> react.js has diff also which finds out the difference between old virtual dom and new virtual dom and updates the UI
+
+
+    how react.js works behind the scenes
+    - 
+    - " reconciliation algo " 
+    - whenever something changes on UI is known as reconciliation 
+
+    # In React16 new algo "React fiber" came out to update the dom
+    -  it is new to finding a diff and updating the dom
+
+    - react uses " reconciliation algo " which is also known as " React fiber "
+
+    ex.
+
+           dom               filtered ->            dom              
+            |                                        | 
+        res-container                           res-container
+        |   |   |  |                              |      |
+        c1  c2 c3  c4                             c1     c4 
+     
+
+    in dom we have res-container and cards we filtered 4 cards to 2 cards
+    now ui changes
+
+
+    # react.js creates a virtual dom
+     - virtual dom is a representation of the actual dom
+     
+     - virtual dom is an Object 
+     - just like React.Element
+
+
+
+   # diff algo  
+
+   
+           dom               filtered ->            dom              
+            |                                        | 
+        res-container                           res-container
+        |   |   |  |                              |      |
+        c1  c2 c3  c4                             c1     c4 
+     
+       old virtual dom                          new virtual dom
+
+
+    - diff algo tries to find out the difference between old virtual dom and new virtual dom   
+    
+    - after calculating the difference then it will update dom on every render cycle
+   - thats how react.js becomes faster
