@@ -12,7 +12,7 @@
     how react.js works behind the scenes
     - 
     - " reconciliation algo " 
-    - whenever something changes on UI is known as reconciliation 
+    - whenever something changes on UI it is known as reconciliation 
 
     # In React16 new algo "React fiber" came out to update the dom
     -  it is new to finding a diff and updating the dom
