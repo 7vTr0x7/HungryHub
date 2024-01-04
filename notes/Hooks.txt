@@ -1,0 +1,12 @@
+
+
+# react hooks
+
+  -> hooks are nothing but normal js utility functions
+
+  useState() - gives superpowerful state variables 
+  -> We use it to create state variables
+
+
+  state variables 
+  -> maintains the state of a component

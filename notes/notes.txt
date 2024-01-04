@@ -1,9 +1,36 @@
 
    props-
    - what are props
-   -> props are passed to components
-   -> passing a prop a to a component is just passing arguments to a function
-   -> prop is an object
+   -> Props are passed to components
+   -> Passing a prop a to a component is just passing arguments to a function
+   -> Prop is an object
    
-   config driven ui -
-   - all the ui is driven by config/api data
+   config-driven UI -
+   - all the UI is driven by config/API data
+
+   map -
+   -> Always give key property to map and it should be unique
+   -> Don't use index as a key
+   - unique key > index > not given key property 
+
+   why use react? - 
+   -> It makes the developer experience easy
+   -> It makes you write less code and do more on the web page
+   -> React gives us superpower so we can build production-ready performant large-scale applications
+   -> React makes our coding experience very fast
+   -> Also optimizes something on the web page to make it faster 
+
+   why react.js is fast?
+   - because it can do faster dom manipulation
+   - it can do efficient dom manipulation
+
+   Two types of import/export
+   -> 1. default export/import 
+         export default component 
+         import component from "path"
+         
+      2. named export/import
+         export const component
+         import {component} from "path"      
+
+         

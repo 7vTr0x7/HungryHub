@@ -52,3 +52,7 @@
   height: 200px;
   border-radius: 10px;
 }
+
+.filter-btn {
+  margin: 10px;
+}
