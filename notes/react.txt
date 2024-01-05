@@ -55,4 +55,5 @@
     - diff algo tries to find out the difference between old virtual dom and new virtual dom   
     
     - after calculating the difference then it will update dom on every render cycle
+    - react render cycle is fast
    - thats how react.js becomes faster
