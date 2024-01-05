@@ -1,4 +1,4 @@
-import { RestaurantCard } from "./index";
+import { RestaurantCard, Shimmer } from "./index";
 import { useState, useEffect } from "react";
 
 const Body = () => {
@@ -22,7 +22,7 @@ const Body = () => {
 
   // conditional rendering
   if (listOfRestaurants.length === 0) {
-    return <h1>loading...</h1>;
+    return <Shimmer />;
   }
 
   return (
