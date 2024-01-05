@@ -1,0 +1,9 @@
+
+
+
+# shimmer UI
+  -> Shimmer UI resembles the page's actual UI so users will understand how quickly the web app loads
+
+
+  #  conditional rendering -
+     -> Rendering based on condition is conditional rendering

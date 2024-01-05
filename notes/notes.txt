@@ -10,7 +10,7 @@
 
    map -
    -> Always give key property to map and it should be unique
-   -> Don't use index as a key
+   -> Don't use the index as a key
    - unique key > index > not given key property 
 
    why use react? - 

@@ -4,7 +4,7 @@
 
   -> hooks are nothing but normal js utility functions
 
-  useState() - gives superpowerful state variables 
+  #useState() - gives superpowerful state variables 
   -> We use it to create state variables
 
 
@@ -15,3 +15,26 @@
 
 
   -> react.js is monitoring the state variables as soon as the state updates react.js will trigger its diff algo to find out the difference between old virtual dom and new virtual dom and then will update the UI and render it 
+
+
+   #useEffect() - 
+   -> It takes 2 arguments 
+   ->  useEffect(() => {
+
+   }, []); 
+
+   -> 1. callback function
+      2. dependency array
+
+   -> useEffect() will be called after the component is completely rendered/components render cycle is complete/over 
+   -> Why does it work like this? -
+      -> Because of  callback() when react.js code runs line by line when it comes to useEffect() there is callback() callback() are asynchronous so they are stored in the web API environment until it settles then it will move to the callback queue then event loop which is monitoring the call stack and callback queue continuously checks if call stack is empty or not is it is then only callback() will move in the call stack to execute
+
+      -> In the meantime all of this happening behind the scenes all the js and JSX code will be executed first 
+
+      -> This is why useEffect() will be called after the component is completely rendered
+
+
+      # use case
+
+      page loads -> component renders -> api call in useEffect -> component re-renders

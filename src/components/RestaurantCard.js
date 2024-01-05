@@ -1,27 +1,23 @@
+import { IMG_URL } from "../../utils/url";
 const RestaurantCard = (props) => {
   const { resData } = props;
 
-  const { name, image, cft, rating } = resData?.info;
-  const { deliveryTime } = resData?.order;
-  const { rating_text } = rating;
-  const { text } = cft;
-
-  const cuisine = resData.info.cuisine;
-  let cuisines = [];
-
-  for (let i of cuisine) {
-    cuisines.push(i.name);
-  }
+  const { name, cloudinaryImageId, avgRating, costForTwo, sla, cuisines } =
+    resData?.info;
 
   return (
     <div className="res-card">
-      <img className="res-logo" alt="res-logo" src={image.url} />
-      <h3>{name}</h3>
+      <img
+        className="res-logo"
+        alt="res-logo"
+        src={IMG_URL + cloudinaryImageId}
+      />
+      <h2>{name}</h2>
+      <h4>{` Cuisines : ${cuisines}`}</h4>
+      <h4>{` price : ${costForTwo}`}</h4>
+      <h4>{` deliveryTime : ${sla.slaString}`}</h4>
 
-      <h5>{` Cuisines : ${cuisines.join(",")}`}</h5>
-      <h5>{` Delivery Time : ${deliveryTime}`}</h5>
-      <h5>{` price : ${text}`}</h5>
-      <h5>{` Rating : ${rating_text}`}</h5>
+      <h4>{` Rating : ${avgRating}`}</h4>
     </div>
   );
 };
