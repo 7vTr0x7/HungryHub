@@ -105,3 +105,11 @@
   cursor: pointer;
   border: none;
 }
+
+.filter {
+  display: flex;
+}
+
+.search-box {
+  margin-top: 10px;
+}

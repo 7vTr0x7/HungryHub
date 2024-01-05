@@ -25,6 +25,8 @@
 
     -> As soon as the state updates entire component re-renders
 
+      #// whenever state variable updates react trigger reconciliation cycle (re-renders the component)
+
  ***    const [variable, setVariable] = useState("");
    # How can react.js update the const state variable using setVariable()?
     -> When we update the state variables the entire component re-renders 
