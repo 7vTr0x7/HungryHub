@@ -14,8 +14,21 @@
   -> Whenever state variables update/changes   react re-renders the component
 
 
-  -> react.js is monitoring the state variables as soon as the state updates react.js will trigger its diff algo to find out the difference between old virtual dom and new virtual dom and then will update the UI and render it 
+  -> react.js is monitoring the state variables as soon as the state updates react.js will trigger (reconciliation cycle) its diff algo finds out the difference between old virtual dom and new virtual dom and then will update the UI and render it 
 
+  # why do we need state variables?
+  ->  In react when we use normal js variables to change something in component variables value changes but it does not appear on UI 
+    why?
+    -> Because it changes the value but it does not trigger (reconciliation cycle) it re-render so UI can be updated
+
+    # This is why we use state variables Whenever the state updates it triggers re-render 
+
+    -> As soon as the state updates entire component re-renders
+
+ ***    const [variable, setVariable] = useState("");
+   # How can react.js update the const state variable using setVariable()?
+    -> When we update the state variables the entire component re-renders 
+       -> Because of this new instance of the state variable is created with the updated value 
 
    #useEffect() - 
    -> It takes 2 arguments 

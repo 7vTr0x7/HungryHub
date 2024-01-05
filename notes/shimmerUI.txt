@@ -7,3 +7,9 @@
 
   #  conditional rendering -
      -> Rendering based on condition is conditional rendering
+
+     
+  // conditional rendering
+  if (listOfRestaurants.length === 0) {
+    return <Shimmer />;
+  }
