@@ -1,0 +1,14 @@
+
+
+
+ # single-page-application  
+   -> is just one page and components are interchanging via client-side-routing
+
+
+ # types of routing
+   - 1. client-side-routing --
+       -> already have code for different routes on click it just changes the component
+
+     2. server-side-routing -
+       ->  fetches the page from server and then renders it on ui
+

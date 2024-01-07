@@ -4,7 +4,7 @@
 
   -> hooks are nothing but normal js utility functions
 
-  #useState() - gives superpowerful state variables 
+  #useState() - gives superpower full state variables 
   -> We use it to create state variables
 
 
@@ -53,3 +53,37 @@
       # use case
 
       page loads -> component renders -> api call in useEffect -> component re-renders
+
+
+ ***  imp -
+      -> every time component renders useEffect() is called  
+
+      -> useEffect() takes two arguments 
+         1. callback function
+         2. dependency array
+      -> callback() is mandatory
+
+      -> if use dependency array it changes the behavior of its render
+
+      ->  if no dependency array => useEffect() is called on every render
+
+      useEffect(() => {
+        console.log();
+      }); 
+
+     
+      ->  if dependency array is empty => useEffect() is called on initial render(when component is rendered first time) just once
+ 
+      useEffect(() => {
+        console.log();
+      },[]); 
+
+
+    ->  if dependency array not empty => first it will be called on initial render and every time  when dependency updates
+
+      useEffect(() => {
+        console.log();
+      },[name]); 
+     
+
+      
