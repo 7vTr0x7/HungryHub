@@ -15,6 +15,7 @@
   padding-right: 25px;
   list-style-type: none;
   font-size: 20px;
+
   font-weight: bold;
 }
 .nav-items > ul > li {
@@ -116,4 +117,10 @@
 
 .search-btn {
   margin: 2px;
+}
+
+/* Add this style in your CSS file or component styles */
+.link-style {
+  text-decoration: none; /* Removes the underline */
+  color: inherit; /* Inherits the color from its parent */
 }
