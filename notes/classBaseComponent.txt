@@ -133,3 +133,7 @@ https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
                   console.log("child componentWillUnmount");
                }
 ```               
+
+Problem with Async in useEffect:
+
+The useEffect hook is not designed to work directly with async functions. If you pass an async function directly to useEffect, it returns a Promise, and React doesn't handle the Promise returned by the effect function.
