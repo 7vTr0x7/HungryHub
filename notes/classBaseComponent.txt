@@ -21,7 +21,11 @@
           -> First the constructor is called
           -> then render() is called
 
+
+
+
   # life Cycle
+
 
     #ex.  if the parent and child are both class-based components
 
@@ -36,3 +40,47 @@
            -> Then the child componentDidMount will be called
 
       -> After all this once the child has been mounted successfully the parent componentDidMount will be called   
+
+
+          
+     # two phases of life-cycle
+
+        1. render phases 
+          -> mounting
+           -> constructor is called 
+           -> Render is called
+
+        2. commit phases
+          -> DOM is updated
+          -> componentDidMount is called        
+
+
+
+      ex.  there are multiple children
+
+      -> parent constructor
+         parent render
+         first child constructor
+         first child render
+         second child constructor
+         second child render
+         the first child did mount
+         the second child did mount
+         parent did Mount 
+
+         
+     -> If there are multiple children react batch them together 
+       -> The render phase is batched and the commit phase is batched together
+
+       that is why output will be in this order
+        -> First the render phase
+           ->  First child constructor
+               first child render
+               second child constructor
+               second child render
+
+       -> Once batch render phase is complete Then commit phase starts
+           ->  The first child did mount
+               The second child did mount   
+
+      this is an optimization of react.js           
