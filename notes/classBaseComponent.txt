@@ -7,3 +7,32 @@
 
   # - 
    -> Never update the state variables directly       
+
+
+  # life Cycle
+
+   # ex. if the parent is a functional component
+    -> Suppose userClass is a class-based component and it is inside the About Component
+    -> 
+    -> When the About component is called it starts rendering/loading/mounting the component line by line when it reaches userClass 
+    -> then it starts loading userClass 
+       -> Now the new instance of this class is created
+       -> When this class is instantiated
+          -> First the constructor is called
+          -> then render() is called
+
+  # life Cycle
+
+    #ex.  if the parent and child are both class-based components
+
+     -> First the parent life cycle will be triggered
+      -> parent constructor will be called
+        -> Then parent render() will be called
+         -> Then rendering starts in render there is a child component loading/mounting/rendering goes to the child meanwhile parents mounting hasn't finished yet
+
+         -> child life cycle will be triggered
+           -> parent constructor will be called
+           -> then child render()
+           -> Then the child componentDidMount will be called
+
+      -> After all this once the child has been mounted successfully the parent componentDidMount will be called   
