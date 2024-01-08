@@ -86,4 +86,20 @@
       },[name]); 
      
 
-      
+      # unmounting in useEffect()
+        -> clearing setInterval
+
+       if we have setInterval in  useEffect it will keep calling it again and again even when we leave the component
+       so we need something to clear when we leave the component
+
+
+        useEffect(() => {
+          const timer = setInterval(()=>{
+           console.log(" componentDidUpdate");
+           },1000);
+
+          return () => {   -> this is the way of unmounting in useEffect()
+            clearInterval(timer);
+          }
+
+        },[]); 
