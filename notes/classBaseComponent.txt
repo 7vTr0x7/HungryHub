@@ -4,3 +4,6 @@
 # What is a class-based component
    -> Class-based components are js class that extends React. Component 
       -> and it has render() method that returns JSX
+
+  # - 
+   -> Never update the state variables directly       
