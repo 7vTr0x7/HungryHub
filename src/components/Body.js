@@ -18,6 +18,16 @@ const Body = () => {
     fetchData();
   }, []);
 
+  // useEffect(() => {
+  //   const timer = setInterval(() => {
+  //     console.log(" componentDidUpdate");
+  //   }, 1000);
+
+  //   return () => { -> this is the way of unmounting in useEffect()
+  //     clearInterval(timer);
+  //   };
+  // }, []);
+
   const fetchData = async () => {
     const data = await fetch(
       "https://www.swiggy.com/api/seo/getListing?lat=18.621055599465002&lng=73.8306423049214"
