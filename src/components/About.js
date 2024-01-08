@@ -4,8 +4,8 @@ const About = () => {
   return (
     <div>
       <h1>About</h1>
-      <User />
-      <UserClass />
+      <User name={"vTrox"} />
+      <UserClass name={"vTrox"} location={"pune"} social={"@vTrox"} />
     </div>
   );
 };

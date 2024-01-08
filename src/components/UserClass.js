@@ -1,12 +1,17 @@
 import React from "react";
 
 class UserClass extends React.Component {
+  constructor(props) {
+    super(props);
+  }
   render() {
+    const { name, location, social } = this.props;
+
     return (
       <div className="user-card">
-        <h1>vTrox</h1>
-        <h2>Pune,India</h2>
-        <h3>@vTrox</h3>
+        <h1>{name}</h1>
+        <h2>{location}</h2>
+        <h3>{social}</h3>
       </div>
     );
   }
