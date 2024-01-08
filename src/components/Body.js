@@ -25,8 +25,8 @@ const Body = () => {
     const jsonData = await data.json();
 
     const extractedData =
-      jsonData?.data?.success?.cards[1]?.card?.card?.gridElements?.infoWithStyle
-        ?.restaurants;
+      jsonData?.data?.success?.cards?.[1]?.card?.card?.gridElements
+        ?.infoWithStyle?.restaurants;
     setListOfRestaurants(extractedData);
     setFilteredListOfRestaurants(extractedData);
   };

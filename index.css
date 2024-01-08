@@ -124,3 +124,8 @@
   text-decoration: none; /* Removes the underline */
   color: inherit; /* Inherits the color from its parent */
 }
+
+.user-card {
+  padding: 20px;
+  border: 1px solid black;
+}

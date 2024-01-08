@@ -6,6 +6,9 @@ import Shimmer from "./Shimmer";
 import Contact from "./Contact";
 import Error from "./Error";
 import ResMenu from "./ResMenu";
+
+import UserClass from "./UserClass";
+import User from "./User";
 export {
   Header,
   Body,
@@ -15,4 +18,6 @@ export {
   Contact,
   Error,
   ResMenu,
+  User,
+  UserClass,
 };
