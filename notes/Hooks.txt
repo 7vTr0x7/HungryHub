@@ -19,13 +19,13 @@
   # why do we need state variables?
   ->  In react when we use normal js variables to change something in component variables value changes but it does not appear on UI 
     why?
-    -> Because it changes the value but it does not trigger (reconciliation cycle) it re-render so UI can be updated
+    -> Because it changes the value but does not trigger (reconciliation cycle) it re-renders so UI can be updated
 
     # This is why we use state variables Whenever the state updates it triggers re-render 
 
     -> As soon as the state updates entire component re-renders
 
-      #// whenever state variable updates react trigger reconciliation cycle (re-renders the component)
+      #//Whenever state variable updates react trigger reconciliation cycle (re-renders the component)
 
  ***    const [variable, setVariable] = useState("");
    # How can react.js update the const state variable using setVariable()?
@@ -63,7 +63,7 @@
          2. dependency array
       -> callback() is mandatory
 
-      -> if use dependency array it changes the behavior of its render
+      -> If using a dependency array it changes the behavior of its render
 
       ->  if no dependency array => useEffect() is called on every render
 
@@ -79,7 +79,7 @@
       },[]); 
 
 
-    ->  if dependency array not empty => first it will be called on initial render and every time  when dependency updates
+    ->  if dependency array not empty => first it will be called on initial render and whenever dependency updates
 
       useEffect(() => {
         console.log();
@@ -89,7 +89,7 @@
       # unmounting in useEffect()
         -> clearing setInterval
 
-       if we have setInterval in  useEffect it will keep calling it again and again even when we leave the component
+       if we have setInterval in  useEffect() it will keep calling it again and again even when we leave the component
        so we need something to clear when we leave the component
 
 
