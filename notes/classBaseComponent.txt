@@ -23,6 +23,8 @@
 
 
 
+    https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
+
 
   # life Cycle
 
@@ -79,8 +81,55 @@
                second child constructor
                second child render
 
-       -> Once batch render phase is complete Then commit phase starts
+       -> Once the batch render phase is complete Then the commit phase starts
            ->  The first child did mount
                The second child did mount   
 
       this is an optimization of react.js           
+
+
+
+https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
+
+   # updating state
+
+     -> mounting cycle
+       render phase
+        -> constructor(dummy data)
+        -> render(dummy data)
+           <HTML(dummy data)>
+
+       commit phase    
+        -> componentDidMount
+           <API call>
+           this.setState -> state variable is updated
+      
+     -> updating cycle
+        render phase 
+          -> render(API data)
+              <HTML (API data)>   
+          -> componentDidUpdate             
+
+
+
+     #  componentWillUnmount -
+       -> will be called when the component is gone from the page  
+          ex. when we go to another page/component   leaving a component
+
+        -> use case of componentWillUnmount() clear stuff of that component after leaving to another component
+          
+          -> ex. if we have setInterval in  componentDidMount it will keep calling it again and again even when we leave the component 
+              so we need something to clear when we leave the component
+
+```
+               componentDidUpdate() {
+                   this.timer = setInterval(()=>{
+                     console.log(" componentDidUpdate");
+                  },1000);
+              }
+
+               componentWillUnmount() {
+                  clearInterval(this.timer)
+                  console.log("child componentWillUnmount");
+               }
+```               
