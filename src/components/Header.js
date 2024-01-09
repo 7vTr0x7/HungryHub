@@ -26,6 +26,11 @@ const Header = () => {
               Contact US
             </Link>
           </li>
+          <li>
+            <Link className="link-style" to="/grocery">
+              Grocery
+            </Link>
+          </li>
           <li>Cart</li>
           <button
             className="login-btn"

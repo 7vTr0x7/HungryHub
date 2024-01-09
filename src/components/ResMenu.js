@@ -9,6 +9,8 @@ const ResMenu = () => {
 
   if (resInfo === null) return <Shimmer />;
 
+  console.log(resInfo);
+
   // Check if info is defined before destructuring
   const { name, cuisines, costForTwoMessage } =
     resInfo?.cards?.[0]?.card?.card?.info;
@@ -26,7 +28,7 @@ const ResMenu = () => {
       <h2>Menu</h2>
       {items.map((item) => (
         <p key={item?.card?.info?.id}>
-          {item?.card?.info?.name} - RS.{item?.card?.info?.defaultPrice / 100}
+          {item?.card?.info?.name} - RS.{item?.card?.info?.price / 100}
         </p>
       ))}
     </div>
