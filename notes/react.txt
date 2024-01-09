@@ -58,5 +58,8 @@
     - react render cycle is fast
    - that's how react.js becomes faster
 
-
+  const [searchText, setSearchText] = useState("");
+  // on each key press in search its updating state variable and re-rendering component
+  console.log("re-rendered");
+  // whenever state variable updates react trigger reconciliation cycle (re-renders the component)
    
