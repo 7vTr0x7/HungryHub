@@ -1,5 +1,5 @@
 import { RestaurantCard, Shimmer } from "./index";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import { Link } from "react-router-dom";
 
@@ -7,9 +7,24 @@ import { useOnlineStatus } from "../../utils/useOnlineStatus";
 import { useResData } from "../../utils/useResData";
 
 const Body = () => {
+  const [listOfRestaurants, setListOfRestaurants] = useState([]);
+  const [filteredListOfRestaurants, setFilteredListOfRestaurants] = useState(
+    []
+  );
   const [searchText, setSearchText] = useState("");
 
-  const [listOfRestaurants, filteredListOfRestaurants] = useResData();
+  const jsonData = useResData();
+
+  useEffect(() => {
+    if (jsonData) {
+      const extractedData =
+        jsonData?.data?.success?.cards?.[1]?.card?.card?.gridElements
+          ?.infoWithStyle?.restaurants;
+
+      setListOfRestaurants(extractedData);
+      setFilteredListOfRestaurants(extractedData);
+    }
+  }, [jsonData]);
 
   const status = useOnlineStatus();
 
