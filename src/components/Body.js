@@ -1,45 +1,19 @@
 import { RestaurantCard, Shimmer } from "./index";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 import { Link } from "react-router-dom";
 
+import { useOnlineStatus } from "../../utils/useOnlineStatus";
+import { useResData } from "../../utils/useResData";
+
 const Body = () => {
-  const [listOfRestaurants, setListOfRestaurants] = useState([]);
-  const [filteredListOfRestaurants, setFilteredListOfRestaurants] = useState(
-    []
-  );
-
   const [searchText, setSearchText] = useState("");
-  // on each key press in search its updating state variable and re-rendering component
-  console.log("re-rendered");
-  // whenever state variable updates react trigger reconciliation cycle (re-renders the component)
 
-  useEffect(() => {
-    fetchData();
-  }, []);
+  const [listOfRestaurants, filteredListOfRestaurants] = useResData();
 
-  // useEffect(() => {
-  //   const timer = setInterval(() => {
-  //     console.log(" componentDidUpdate");
-  //   }, 1000);
+  const status = useOnlineStatus();
 
-  //   return () => { -> this is the way of unmounting in useEffect()
-  //     clearInterval(timer);
-  //   };
-  // }, []);
-
-  const fetchData = async () => {
-    const data = await fetch(
-      "https://www.swiggy.com/api/seo/getListing?lat=18.621055599465002&lng=73.8306423049214"
-    );
-    const jsonData = await data.json();
-
-    const extractedData =
-      jsonData?.data?.success?.cards?.[1]?.card?.card?.gridElements
-        ?.infoWithStyle?.restaurants;
-    setListOfRestaurants(extractedData);
-    setFilteredListOfRestaurants(extractedData);
-  };
+  if (status === false) return <h1>no internet</h1>;
 
   return listOfRestaurants.length === 0 ? (
     <Shimmer />

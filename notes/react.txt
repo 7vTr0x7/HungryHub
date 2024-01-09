@@ -56,4 +56,7 @@
     
     - after calculating the difference then it will update dom on every render cycle
     - react render cycle is fast
-   - thats how react.js becomes faster
+   - that's how react.js becomes faster
+
+
+   
