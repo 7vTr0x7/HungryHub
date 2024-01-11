@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 
 import { useOnlineStatus } from "../../utils/useOnlineStatus";
 import { useResData } from "../../utils/useResData";
+import { data } from "../../utils/data.json";
 
 const Body = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
@@ -13,18 +14,20 @@ const Body = () => {
   );
   const [searchText, setSearchText] = useState("");
 
-  const jsonData = useResData();
+  const jsonData = data;
 
   useEffect(() => {
     if (jsonData) {
       const extractedData =
-        jsonData?.data?.success?.cards?.[1]?.card?.card?.gridElements
-          ?.infoWithStyle?.restaurants;
+        jsonData?.success?.cards?.[2]?.card?.card?.gridElements?.infoWithStyle
+          ?.restaurants;
 
       setListOfRestaurants(extractedData);
       setFilteredListOfRestaurants(extractedData);
     }
   }, [jsonData]);
+
+  console.log(data);
 
   const status = useOnlineStatus();
 
