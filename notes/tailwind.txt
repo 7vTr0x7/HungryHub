@@ -1,0 +1,5 @@
+
+ 
+
+   # tailwind css 
+     -> Tailwind CSS gives us the class name for every CSS we want to use

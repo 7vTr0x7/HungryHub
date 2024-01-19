@@ -5,35 +5,35 @@ const Header = () => {
   const [log, setLog] = useState("LogIn");
 
   return (
-    <div className="header">
+    <div className="flex justify-between shadow-lg m-2 ">
       <div className="logo-container">
-        <img className="logo" src={logo} />
+        <img className="h-28" src={logo} />
       </div>
       <div className="nav-items">
-        <ul>
-          <li>
+        <ul className="flex m-4 p-4">
+          <li className="px-4">
             <Link className="link-style" to="/">
               Home
             </Link>
           </li>
-          <li>
+          <li className="px-4">
             <Link className="link-style" to="/about">
               About US
             </Link>
           </li>
-          <li>
+          <li className="px-4">
             <Link className="link-style" to="/contact">
               Contact US
             </Link>
           </li>
-          <li>
+          <li className="px-4">
             <Link className="link-style" to="/grocery">
               Grocery
             </Link>
           </li>
-          <li>Cart</li>
+          <li className="px-4">Cart</li>
           <button
-            className="login-btn"
+            className="px-4"
             onClick={() => {
               log === "LogIn" ? setLog("LogOut") : setLog("LogIn");
             }}>
