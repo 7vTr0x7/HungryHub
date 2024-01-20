@@ -18,6 +18,10 @@ const ResMenu = () => {
   const items =
     resInfo?.cards?.[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.[2]?.card
       ?.card?.itemCards;
+  console.log(
+    resInfo?.cards?.[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.[2]?.card
+      ?.card?.itemCards
+  );
   return (
     <div className="menu">
       <h1>{name}</h1>

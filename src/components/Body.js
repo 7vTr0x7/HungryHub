@@ -1,5 +1,6 @@
 import { RestaurantCard, Shimmer } from "./index";
 import { useState, useEffect } from "react";
+import { withDiscountLabel } from "./RestaurantCard";
 
 import { Link } from "react-router-dom";
 
@@ -12,6 +13,8 @@ const Body = () => {
     []
   );
   const [searchText, setSearchText] = useState("");
+
+  const DiscountItems = withDiscountLabel(RestaurantCard);
 
   const jsonData = useResData();
 
@@ -79,7 +82,11 @@ const Body = () => {
             key={res.info.id}
             to={"/restaurants/" + res.info.id}
             className="link-style">
-            <RestaurantCard resData={res} />
+            {res.info?.aggregatedDiscountInfoV3?.header ? (
+              <DiscountItems resData={res} />
+            ) : (
+              <RestaurantCard resData={res} />
+            )}
           </Link>
         ))}
       </div>

@@ -1,0 +1,13 @@
+
+
+  
+   # Higher order components (HOC)
+     -> Higher-order components are functions that takes a component inside and returns a component
+
+       ->  Higher-order components are functions that takes  components as input enhances that component/add some extra features to it and then return it back
+
+
+ #definition -
+
+       -> It works as an enhancer functions 
+          - it takes an existing component it enhances/modifies it a little and returns it is known as a Higher order component
