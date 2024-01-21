@@ -33,10 +33,9 @@ export const withDiscountLabel = (RestaurantCard) => {
 
     return (
       <div>
-        <label className="relative p-2 top-64 left-8 text-white text-2xl font-extrabold  ">
+        <label className="absolute p-2 pt-52 pl-6  m-2  text-white text-2xl font-extrabold  ">
           {discountUpTo}
         </label>
-
         <RestaurantCard {...props} />
       </div>
     );

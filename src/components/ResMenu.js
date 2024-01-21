@@ -1,6 +1,7 @@
 import { Shimmer } from "./index";
 import { useParams } from "react-router-dom";
 import { useRestaurantMenu } from "../../utils/useRestaurantMenu";
+import RestaurantCategory from "./RestaurantCategory";
 
 const ResMenu = () => {
   const { resId } = useParams();
@@ -9,8 +10,6 @@ const ResMenu = () => {
 
   if (resInfo === null) return <Shimmer />;
 
-  console.log(resInfo);
-
   // Check if info is defined before destructuring
   const { name, cuisines, costForTwoMessage } =
     resInfo?.cards?.[0]?.card?.card?.info;
@@ -18,22 +17,25 @@ const ResMenu = () => {
   const items =
     resInfo?.cards?.[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.[2]?.card
       ?.card?.itemCards;
-  console.log(
-    resInfo?.cards?.[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.[2]?.card
-      ?.card?.itemCards
-  );
-  return (
-    <div className="menu">
-      <h1>{name}</h1>
 
-      <h3>
+  const categories =
+    resInfo?.cards?.[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
+      (c) =>
+        c?.card?.card?.["@type"] ===
+        "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
+    );
+
+  console.log(categories);
+  return (
+    <div className="text-center ">
+      <h1 className="font-bold my-5 text-2xl">{name}</h1>
+
+      <h3 className="font-bold text-lg">
         {cuisines.join(",")} - {costForTwoMessage}
       </h3>
-      <h2>Menu</h2>
-      {items.map((item) => (
-        <p key={item?.card?.info?.id}>
-          {item?.card?.info?.name} - RS.{item?.card?.info?.price / 100}
-        </p>
+
+      {categories.map((category) => (
+        <RestaurantCategory />
       ))}
     </div>
   );
