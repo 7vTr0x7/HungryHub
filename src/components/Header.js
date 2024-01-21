@@ -9,7 +9,7 @@ const Header = () => {
       <div className="logo-container">
         <img className="h-28" src={logo} />
       </div>
-      <div className="nav-items">
+      <div className="nav-items font-bold">
         <ul className="flex m-4 p-4">
           <li className="px-4">
             <Link className="link-style" to="/">

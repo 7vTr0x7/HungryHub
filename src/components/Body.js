@@ -38,11 +38,11 @@ const Body = () => {
     <Shimmer />
   ) : (
     <div className="body">
-      <div className="filter flex">
-        <div className="search-box m-4 p-4">
+      <div className="filter flex font-bold">
+        <div className="search-box m-4 p-4 ">
           <input
             type="text"
-            className="border border-solid  border-black rounded-lg"
+            className="border border-solid  border-black rounded-lg font-semibold"
             value={searchText} // on each key press in search its updating state variable and re-rendering component whenever state variable updates react trigger reconciliation cycle (re-renders the component)
             onChange={(e) => {
               setSearchText(e.target.value);

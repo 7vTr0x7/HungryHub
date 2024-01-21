@@ -1,0 +1,7 @@
+
+   
+   # controlled and un-controlled component -
+
+     -> when the component have the control of it own state it is known as un-controlled component
+
+     -> when the component is relying on its parent to take control of its state it is known as controlled component 
