@@ -1,5 +1,6 @@
 import { IMG_URL } from "../../utils/url";
 const ItemList = ({ items }) => {
+  console.log(items);
   return (
     <div>
       {items.map((item) => (

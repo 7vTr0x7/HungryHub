@@ -30,9 +30,10 @@ const ResMenu = () => {
       </h3>
 
       {categories.map((category) => (
-        <div>
-          <RestaurantCategory data={category.card.card} />
-        </div>
+        <RestaurantCategory
+          key={category?.card?.card?.title}
+          data={category?.card?.card}
+        />
       ))}
     </div>
   );

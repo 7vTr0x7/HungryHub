@@ -6,7 +6,9 @@ const RestaurantCategory = ({ data }) => {
   const [showItems, setShowItems] = useState(false);
 
   const handleClick = () => {
-    showItems ? setShowItems(false) : setShowItems(true);
+    // showItems ? setShowItems(false) : setShowItems(true);
+
+    setShowItems(!showItems);
   };
   return (
     <div>
@@ -22,7 +24,7 @@ const RestaurantCategory = ({ data }) => {
           </span>
         </div>
 
-        {showItems ? <ItemList items={data.itemCards} /> : " "}
+        {showItems && <ItemList items={data.itemCards} />}
       </div>
     </div>
   );
