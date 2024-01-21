@@ -14,10 +14,6 @@ const ResMenu = () => {
   const { name, cuisines, costForTwoMessage } =
     resInfo?.cards?.[0]?.card?.card?.info;
 
-  const items =
-    resInfo?.cards?.[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.[2]?.card
-      ?.card?.itemCards;
-
   const categories =
     resInfo?.cards?.[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
       (c) =>
@@ -25,7 +21,6 @@ const ResMenu = () => {
         "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
     );
 
-  console.log(categories);
   return (
     <div className="text-center ">
       <h1 className="font-bold my-5 text-2xl">{name}</h1>
@@ -35,7 +30,9 @@ const ResMenu = () => {
       </h3>
 
       {categories.map((category) => (
-        <RestaurantCategory />
+        <div>
+          <RestaurantCategory data={category.card.card} />
+        </div>
       ))}
     </div>
   );
