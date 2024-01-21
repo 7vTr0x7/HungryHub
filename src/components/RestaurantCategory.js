@@ -1,14 +1,10 @@
-import { useState } from "react";
 import down from "../../utils/down.png";
 import up from "../../utils/up.png";
 import ItemList from "./ItemList";
-const RestaurantCategory = ({ data }) => {
-  const [showItems, setShowItems] = useState(false);
-
+const RestaurantCategory = ({ data, showItems, setShowIndex }) => {
   const handleClick = () => {
     // showItems ? setShowItems(false) : setShowItems(true);
-
-    setShowItems(!showItems);
+    setShowIndex();
   };
   return (
     <div>
