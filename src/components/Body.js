@@ -1,11 +1,12 @@
 import { RestaurantCard, Shimmer } from "./index";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { withDiscountLabel } from "./RestaurantCard";
 
 import { Link } from "react-router-dom";
 
 import { useOnlineStatus } from "../../utils/useOnlineStatus";
 import { useResData } from "../../utils/useResData";
+import UserContext from "../../utils/UserContext";
 
 const Body = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
@@ -13,6 +14,8 @@ const Body = () => {
     []
   );
   const [searchText, setSearchText] = useState("");
+
+  const { loggedInUser, setUserName } = useContext(UserContext);
 
   const DiscountItems = withDiscountLabel(RestaurantCard);
 
@@ -42,7 +45,7 @@ const Body = () => {
         <div className="search-box m-4 p-4 ">
           <input
             type="text"
-            className="border border-solid  border-black rounded-lg font-semibold"
+            className="border border-solid  border-black rounded-lg font-semibold pl-2"
             value={searchText} // on each key press in search its updating state variable and re-rendering component whenever state variable updates react trigger reconciliation cycle (re-renders the component)
             onChange={(e) => {
               setSearchText(e.target.value);
@@ -63,7 +66,7 @@ const Body = () => {
             search
           </button>
         </div>
-        <div className="search-box  m-4 p-4 flex items-center">
+        <div className="search-box   my-4 p-4 flex items-center">
           <button
             className="px-4 py-2 m-4 bg-green-100 rounded-xl"
             onClick={() => {
@@ -74,6 +77,14 @@ const Body = () => {
             }}>
             Top Rated
           </button>
+          <div className="search-box  ">
+            <input
+              type="text"
+              className="border border-solid  border-black rounded-lg font-semibold pl-2"
+              value={loggedInUser}
+              onChange={(e) => setUserName(e.target.value)}
+            />
+          </div>
         </div>
       </div>
       <div className="flex flex-wrap">
