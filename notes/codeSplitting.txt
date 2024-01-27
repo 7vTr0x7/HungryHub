@@ -1,6 +1,6 @@
 
 
- # code splitting / chunking / dynamic bundling / lazy loading / on-demand loading / dynamic import
+ # code splitting/chunking/dynamic bundling/lazy loading/on-demand loading/dynamic import
 
    -> this all are the same thing
      -> to break down our app into smaller logical chunks 

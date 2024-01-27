@@ -1,5 +1,5 @@
 
 
 
-  # lifting state up 
-    -> sometime we have to lift the state up to parent component to control component's children
+  # Lifting state up 
+    -> Sometimes we have to lift the state up to the parent component to control the component's children

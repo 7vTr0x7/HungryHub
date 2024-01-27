@@ -5,4 +5,4 @@
 
     -> problem with prop drilling
 
-    -> passing the data form a component to its grand-to-grand child by passing through multiple parents and child components 
+    -> passing the data from a component to its grand-to-grandchild by passing through multiple parents and child components 
