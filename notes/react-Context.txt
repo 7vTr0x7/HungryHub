@@ -1,0 +1,4 @@
+
+ 
+   # react-context 
+     -> It is a global environment where data is kept so anybody can access it
