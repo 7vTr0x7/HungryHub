@@ -24,6 +24,9 @@
      - Install babel dependencies
      - Configure babel
      - Configure parcel config file to disable default babel transpilation
+     - Jest: npx jest --init
+     - Install jsdom library
+        - jsdom is a browser-like environment for Testing
 
 
 
