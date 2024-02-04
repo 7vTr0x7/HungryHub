@@ -14,7 +14,10 @@ import { createSlice } from "@reduxjs/toolkit";
             state.items.pop()
         },
         clearCart: (state) => {
+            //RTk - either mutate the existing state or return new state
             state.items.length = 0
+            //OR
+            // return [];
         }
     }
  })
