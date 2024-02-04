@@ -6,3 +6,4 @@ export const MENU_URL =
 
 export const RES_URL =
   "https://www.swiggy.com/api/seo/getListing?lat=18.621055599465002&lng=73.8306423049214";
+

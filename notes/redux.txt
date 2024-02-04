@@ -10,7 +10,12 @@
           - Connect our store to our app
           - Slice (CartSlice)
           - Dispatch (action)
-          - Selector
+          - Selector 
+             - is a hook
+
+    # 
+      -> Redux is a library used for state management
+      -> react-redux is used as a bridge between redux and our app
 
 
 

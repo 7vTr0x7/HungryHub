@@ -13,11 +13,11 @@ class About extends Component {
       <div>
         <h1>About</h1>
 
-        <h3>
+        
           <UserContext.Consumer>
             {({ loggedInUser }) => <h1>{loggedInUser}</h1>}
           </UserContext.Consumer>
-        </h3>
+        
 
         <UserClass name={"vTrox"} location={"pune"} social={"@vTrox"} />
       </div>
