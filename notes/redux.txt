@@ -1,0 +1,48 @@
+
+
+
+  # Redux -
+
+
+    steps - 
+          - Install @reduxjs/toolkit and react-redux
+          - Build our store
+          - Connect our store to our app
+          - Slice (CartSlice)
+          - Dispatch (action)
+          - Selector
+
+
+
+    -> Redux toolkit 
+       -> What is redux store?
+          -> It is a big js object with lots of data inside it and it is kept in a global central place 
+
+       -> What are slices in the redux store?
+          -> To keep data separate we make logical partitions and these logical partitions are slices  
+             -> ex. user-slice, cart-slice, theme-slice 
+
+
+        # Now On clicking of "Add" button  we want to add items to our cart slice eventually it is an empty array
+          ->  On clicking of "Add" button we cannot add items to the cart slice
+          -> Redux says that we cannot directly modify the cart slice  
+
+          But,
+          -> There is a way to do that
+             ->  On clicking of "Add" button ( it dispatches an action )
+               -> After dispatching of action this action calls the function ( Reducer Function )
+                  -> Then this reducer function internally modifies/updates the slice/ (cart-slice) of the redux store
+
+           -> Now to read/get data
+             -> To read/get data from the slice of the redux store we use the "Selector" 
+               ->  Selector will help to get the data from the slice of the redux store to our Component
+
+               #
+                  -> This phenomenon is known as ( " subscribing to the store " ) 
+                   -> Now we can say our "Header Component/Cart Component" is subscribed to our redux store
+
+                  # 
+                   -> "subscribed" / "it is in sync" with  the store
+                     -> If the data inside of the store changes it automatically changes the Component
+                      -> This is why we call it ( " subscribing to the store " ) 
+                       -> we subscribe using "Selector" 

@@ -11,10 +11,10 @@ const Header = () => {
   return (
     <div className="flex justify-between shadow-lg m-2 ">
       <div className="logo-container">
-        <img className="h-28" src={logo} />
+        <img className="h-24" src={logo} />
       </div>
       <div className="nav-items font-bold">
-        <ul className="flex m-4 p-4">
+        <ul className="flex m-4 p-4  items-center">
           <li className="px-4">
             <Link className="link-style" to="/">
               Home
