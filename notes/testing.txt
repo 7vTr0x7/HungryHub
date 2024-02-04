@@ -1,0 +1,30 @@
+
+ 
+
+    # Types of Testing
+      - Unit Testing
+      - Integration Testing
+      - End to End Testing (e2e Testing)
+          
+          
+          
+      # Unit Testing
+       -> Testing one unit/component in isolation
+
+
+      # Integration Testing
+       -> Testing work flow of multiple components
+
+      # End to End Testing (e2e Testing)
+       -> simulating what user will do through out the app  
+
+   # setting up Testing in our app
+     - Install react Testing library
+     - Install jest
+     - Install babel dependencies
+     - Configure babel
+
+
+
+
+
