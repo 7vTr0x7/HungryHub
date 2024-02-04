@@ -13,16 +13,17 @@
 
 
       # Integration Testing
-       -> Testing work flow of multiple components
+       -> Testing workflow of multiple components
 
       # End to End Testing (e2e Testing)
-       -> simulating what user will do through out the app  
+       -> Simulating what the user will do throughout the app  
 
-   # setting up Testing in our app
+   # Setting up Testing in our app
      - Install react Testing library
      - Install jest
      - Install babel dependencies
      - Configure babel
+     - Configure parcel config file to disable default babel transpilation
 
 
 
