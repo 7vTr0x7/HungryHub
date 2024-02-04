@@ -17,7 +17,7 @@ import { createSlice } from "@reduxjs/toolkit";
             //RTk - either mutate the existing state or return new state
             state.items.length = 0
             //OR
-            // return [];
+            // return {items:[]};
         }
     }
  })
