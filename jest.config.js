@@ -193,6 +193,18 @@ const config = {
 
   // Whether to use watchman for file crawling
   // watchman: true,
+
+  moduleNameMapper: {
+    "\\.(png|jpg|jpeg|gif|svg)$": "identity-obj-proxy",
+    // Add other moduleNameMapper entries as needed
+  },
+  transformIgnorePatterns: [
+    "\\\\node_modules\\\\",
+    "\\.pnp\\.[^\\\\]+$",
+    // Add other patterns as needed
+    "^.+\\.png$",
+    // Include patterns for other image formats if necessary
+  ],
 };
 
 module.exports = config;

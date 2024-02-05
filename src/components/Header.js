@@ -16,7 +16,7 @@ const Header = () => {
   return (
     <div className="flex justify-between shadow-lg m-2 ">
       <div className="logo-container">
-        <img className="h-24" src={logo} />
+        <h1 className="font-bold text-3xl m-4 p-4">FoodHUB</h1>
       </div>
       <div className="nav-items font-bold">
         <ul className="flex m-4 p-4  items-center">
@@ -41,9 +41,9 @@ const Header = () => {
             </Link>
           </li>
           <li className="px-4">
+            <span className=" absolute text-lg pl-8 pb-2">{cartItems.length}</span>
             <Link className="link-style" to="/cart">
-              <span className="absolute text-xl pl-8">{cartItems.length}</span>
-              <img src={cartIcon} alt="cart-icon" className="  h-10" />
+              <h2>Cart</h2>
             </Link>
           </li>
           <button
