@@ -1,0 +1,79 @@
+{
+  "info": {
+    "id": "769470",
+    "name": "Burger King",
+    "cloudinaryImageId": "533d5ee221cb729dcf42faeb8761f57d",
+    "locality": "PREMIER PLAZA MALL",
+    "areaName": "CHINCHWAD",
+    "costForTwo": "₹350 for two",
+    "cuisines": ["Burgers", "American"],
+    "avgRating": 4,
+    "parentId": "166",
+    "avgRatingString": "4.0",
+    "totalRatingsString": "500+",
+    "sla": {
+      "deliveryTime": 39,
+      "lastMileTravel": 5,
+      "serviceability": "SERVICEABLE",
+      "slaString": "35-40 mins",
+      "lastMileTravelString": "5.0 km",
+      "iconType": "ICON_TYPE_EMPTY"
+    },
+    "availability": {
+      "nextCloseTime": "2024-02-06 03:00:00",
+      "opened": true
+    },
+    "badges": {},
+    "isOpen": true,
+    "aggregatedDiscountInfoV2": {
+      "header": "60% OFF",
+      "shortDescriptionList": [
+        {
+          "meta": "Buy 2 Get 1 Free",
+          "discountType": "BXGY",
+          "operationType": "RESTAURANT"
+        }
+      ],
+      "descriptionList": [
+        {
+          "meta": "60% off up to ₹120 | Use code STEALDEAL",
+          "discountType": "Percentage",
+          "operationType": "RESTAURANT"
+        }
+      ]
+    },
+    "type": "F",
+    "badgesV2": {
+      "entityBadges": {
+        "imageBased": {},
+        "textBased": {},
+        "textExtendedBadges": {}
+      }
+    },
+    "orderabilityCommunication": {
+      "title": {},
+      "subTitle": {},
+      "message": {},
+      "customIcon": {}
+    },
+    "differentiatedUi": {
+      "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+      "differentiatedUiMediaDetails": {
+        "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+        "lottie": {},
+        "video": {}
+      }
+    },
+    "reviewsSummary": {},
+    "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+    "isNewlyOnboarded": true,
+    "restaurantOfferPresentationInfo": {}
+  },
+  "analytics": {},
+  "cta": {
+    "link": "https://www.swiggy.com/restaurants/burger-king-premier-plaza-mall-chinchwad-pune-769470",
+    "text": "RESTAURANT_MENU",
+    "type": "WEBLINK"
+  },
+  "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo"
+}
