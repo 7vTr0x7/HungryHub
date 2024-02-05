@@ -18,9 +18,9 @@ const RestaurantCategory = ({ data, showItems, setShowIndex, close }) => {
           <span className="font-bold text-lg">
             {data.title} ({data.itemCards.length})
           </span>
-          <span>
+          {/* <span>
             <img src={showItems ? up : down} alt="down" className="h-4" />
-          </span>
+          </span> */}
         </div>
 
         {showItems && <ItemList items={data.itemCards} />}
