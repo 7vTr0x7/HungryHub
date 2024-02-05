@@ -13,7 +13,7 @@
 
 
       # Integration Testing
-       -> Testing workflow of multiple components
+       -> Testing workflow of multiple components ( multiple components working together )
 
       # End to End Testing (e2e Testing)
        -> Simulating what the user will do throughout the app  
@@ -30,7 +30,22 @@
      - Include @babel/preset-react inside babel config  
      - Install @testing-library/jest-dom 
 
-    
+     # add  "watch-test": "jest --watch" to package.json to automatically run the test
+
+    # modifying/altering the fetch to work with jsdom environment
+          global.fetch = jest.fn(() => {
+              return Promise.resolve({
+                  json : ()=> {
+                      return Promise.resolve(MOCK_DATA)
+                  }
+              })
+          })
+ 
+
+    # when ever testing fetch or async operations
+      -> we have to wrap render in act function
+        ->     await act(() =>  render(<Body />))
+
 
    # writing test cases 
      - we can use "it" and "test"

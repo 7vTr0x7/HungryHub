@@ -45,14 +45,11 @@ const Body = () => {
         <div className="search-box m-4 p-4 ">
           <input
             type="text"
+            data-testid = "searchInput"
             className="border border-solid  border-black rounded-lg font-semibold pl-2"
             value={searchText} // on each key press in search its updating state variable and re-rendering component whenever state variable updates react trigger reconciliation cycle (re-renders the component)
             onChange={(e) => {
               setSearchText(e.target.value);
-              const filteredList = listOfRestaurants.filter((res) =>
-                res.info.name.toLowerCase().includes(searchText.toLowerCase())
-              );
-              setFilteredListOfRestaurants(filteredList);
             }}
           />
           <button
