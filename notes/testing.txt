@@ -25,8 +25,10 @@
      - Configure babel
      - Configure parcel config file to disable default babel transpilation
      - Jest: npx jest --init
-     - Install jsdom library
-        - jsdom is a browser-like environment for Testing
+     - Install jsdom library  - jsdom is a browser-like environment for Testing
+     - Install @babel/preset-react - to make JSX work in test cases
+     - Include @babel/preset-react inside babel config  
+     - Install @testing-library/jest-dom 
 
     
     # __tests__  ("__") is known as "dunder"
