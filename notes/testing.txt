@@ -31,6 +31,10 @@
      - Install @testing-library/jest-dom 
 
     
+
+   # writing test cases 
+     - we can use "it" and "test"
+
     # __tests__  ("__") is known as "dunder"
  
 
