@@ -40,11 +40,14 @@ const Header = () => {
               Grocery
             </Link>
           </li>
+         
           <li className="px-4">
-            <span className=" absolute text-lg pl-8 pb-2">{cartItems.length}</span>
             <Link className="link-style" to="/cart">
-              <h2>Cart</h2>
+              Cart
             </Link>
+          <span className=" absolute text-lg pr-8 pb-2">
+            {cartItems.length}
+          </span>
           </li>
           <button
             className="px-4"
